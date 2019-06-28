@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <mdb-navbar color="indigo" dark>
+      <mdb-navbar-brand to="/">Nano Monitor Dashboard</mdb-navbar-brand>
+      <mdb-navbar-toggler>
+        <mdb-navbar-nav>
+          <mdb-nav-item to="/" active>Home</mdb-nav-item>
+          <mdb-nav-item to="/about">Features</mdb-nav-item>
+        </mdb-navbar-nav>
+      </mdb-navbar-toggler>
+    </mdb-navbar>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  import { mdbNavbar, mdbNavbarBrand, mdbNavbarToggler, mdbNavbarNav, mdbNavItem, mdbDropdown, mdbDropdownMenu, mdbDropdownToggle, mdbInput, mdbDropdownItem } from 'mdbvue';
+  export default {
+    name: 'NavbarPage',
+    components: {
+      mdbNavbar,
+      mdbNavbarBrand,
+      mdbNavbarToggler,
+      mdbNavbarNav,
+      mdbNavItem,
+      mdbDropdown,
+      mdbDropdownMenu,
+      mdbDropdownToggle,
+      mdbDropdownItem,
+      mdbInput
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
